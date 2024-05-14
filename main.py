@@ -2,6 +2,8 @@
 # Authors: Cian
 # Made: 14/5/2024
 
+import time
+
 class Search:
     def __init__(self, array, toFind) -> None:
         self.array = array
@@ -106,12 +108,20 @@ def main():
     # Initialize variables
     array = [3, 53, 9, 38, 2, 58]
     toFind = 9
+    logTime = True
+
+    if logTime:
+        startTime = time.time()
 
     Sort(array).quickSort() # Sort Array
     #print(array) # Testing
 
     print(Search(array, toFind).binarySearch()) # Search for element, returns True if found
 
+    if logTime:
+        endTime = time.time()
+        runTime = endTime - startTime
+        print(f"\nCompleted process in {runTime} seconds")
 
 # This code will run if this file is executed directly
 # (i.e. not called by another program)
