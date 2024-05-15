@@ -78,7 +78,8 @@ class Sort:
         return pointerLow + 1
 
     def quickSort(self, array=None, low=None, high=None): # Main quicksort function
-
+        """Quick sort algorithm"""
+        
         if low is None or high is None or array is None:
             array = self.array
             low = 0
